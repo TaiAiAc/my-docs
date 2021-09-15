@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>项目配置 | vite-press入门使用</title>
+    <meta name="description" content="vite-press">
+    <link rel="stylesheet" href="/my-docs/assets/style.cac40d77.css">
+    <link rel="modulepreload" href="/my-docs/assets/Home.d5153fe3.js">
+    <link rel="modulepreload" href="/my-docs/assets/app.e800a447.js">
+    <link rel="modulepreload" href="/my-docs/assets/main_config.md.bc48b11e.lean.js">
+    <link rel="modulepreload" href="/my-docs/assets/app.e800a447.js">
+    <link rel="icon" href="favicon.ico">
+    <meta name="twitter:title" content="项目配置 | vite-press入门使用">
+    <meta property="og:title" content="项目配置 | vite-press入门使用">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme"><header class="nav-bar" data-v-675d8756><div class="sidebar-button" data-v-675d8756><svg class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" class></path></svg></div><a class="nav-bar-title" href="/my-docs/" aria-label="vite-press入门使用, back to home" data-v-675d8756 data-v-4a583abe><img class="logo" src="/my-docs/favicon.ico" alt="Logo" data-v-4a583abe> vite-press入门使用</a><div class="flex-grow" data-v-675d8756></div><div class="nav" data-v-675d8756><nav class="nav-links" data-v-675d8756 data-v-eab3edfe><!--[--><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/my-docs/about/" data-v-b8818f8c>关于 <!----></a></div></div><!--]--><!----><!----></nav></div><!--[--><!--]--></header><aside class="sidebar" data-v-83e92a68><nav class="nav-links nav" data-v-83e92a68 data-v-eab3edfe><!--[--><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/my-docs/about/" data-v-b8818f8c>关于 <!----></a></div></div><!--]--><!----><!----></nav><!--[--><!--]--><ul class="sidebar-links" data-v-83e92a68><!--[--><li class="sidebar-link"><a class="sidebar-link-item" href="/my-docs/main/">认识一下吧</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/my-docs/main/start">起步</a><!----></li><li class="sidebar-link"><p class="sidebar-link-item">配置</p><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item active" href="/my-docs/main/config">项目配置</a><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="#项目基础配置">项目基础配置</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#项目主题配置">项目主题配置</a><!----></li></ul></li><li class="sidebar-link"><a class="sidebar-link-item" href="/my-docs/main/route">路由</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/my-docs/main/main">首页配置</a><!----></li></ul></li><li class="sidebar-link"><a class="sidebar-link-item" href="/my-docs/main/md">Markdown语法</a><!----></li><!--]--></ul><!--[--><!--]--></aside><!-- TODO: make this button accessible --><div class="sidebar-mask"></div><main class="page" data-v-7eddb2c4><div class="container" data-v-7eddb2c4><!--[--><!--]--><div style="position:relative;" class="content" data-v-7eddb2c4><div><h1 id="项目配置" tabindex="-1">项目配置 <a class="header-anchor" href="#项目配置" aria-hidden="true">#</a></h1><p>在 <code>.vitepress</code> 目录下创建 <code>config.js</code> 文件,该文件为全局配置,与 <code>vue-press</code> 很相似,很多官方文档没有提到的配置建议去翻阅 <code>vue-press</code> 文档查找配置.</p><h2 id="项目基础配置" tabindex="-1">项目基础配置 <a class="header-anchor" href="#项目基础配置" aria-hidden="true">#</a></h2><p>直接上代码</p><div class="language-JavaScript"><pre><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  title<span class="token operator">:</span> <span class="token string">&#39;vite-press入门使用&#39;</span><span class="token punctuation">,</span> <span class="token comment">// 网站标题</span>
+  description<span class="token operator">:</span> <span class="token string">&#39;vite-press&#39;</span><span class="token punctuation">,</span> <span class="token comment">//网站描述</span>
+  base<span class="token operator">:</span> <span class="token string">&#39;/&#39;</span><span class="token punctuation">,</span> <span class="token comment">//  部署时的路径 默认 /  可以使用二级地址 /base/</span>
+  lang<span class="token operator">:</span> <span class="token string">&#39;en-US&#39;</span><span class="token punctuation">,</span> <span class="token comment">//语言</span>
+  <span class="token comment">// 相当于html中&lt;head&gt;标签</span>
+  head<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">[</span>
+      <span class="token string">&#39;link&#39;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        rel<span class="token operator">:</span> <span class="token string">&#39;icon&#39;</span><span class="token punctuation">,</span>
+        href<span class="token operator">:</span> <span class="token string">&#39;favicon.ico&#39;</span> <span class="token comment">// 图片放在public文件夹下</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="tip custom-block"><p class="custom-block-title">这是绿色</p><p>需要手动配置的很少,更多需求自行百度.</p></div><h2 id="项目主题配置" tabindex="-1">项目主题配置 <a class="header-anchor" href="#项目主题配置" aria-hidden="true">#</a></h2><div class="language-JavaScript"><pre><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+  <span class="token comment">// 主题配置</span>
+  themeConfig<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// nav 左侧logo</span>
+    logo<span class="token operator">:</span> <span class="token string">&#39;/favicon.ico&#39;</span><span class="token punctuation">,</span>
+    <span class="token comment">//   头部导航</span>
+    nav<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> text<span class="token operator">:</span> <span class="token string">&#39;关于&#39;</span><span class="token punctuation">,</span> link<span class="token operator">:</span> <span class="token string">&#39;/about/&#39;</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div></div><footer class="page-footer" data-v-7eddb2c4 data-v-fb8d84c6><div class="edit" data-v-fb8d84c6><div class="edit-link" data-v-fb8d84c6 data-v-1ed99556><!----></div></div><div class="updated" data-v-fb8d84c6><!----></div></footer><div class="next-and-prev-link" data-v-7eddb2c4 data-v-38ede35f><div class="container" data-v-38ede35f><div class="prev" data-v-38ede35f><a class="link" href="/my-docs/main/start" data-v-38ede35f><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" class="icon icon-prev" data-v-38ede35f><path d="M19,11H7.4l5.3-5.3c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0l-7,7c-0.1,0.1-0.2,0.2-0.2,0.3c-0.1,0.2-0.1,0.5,0,0.8c0.1,0.1,0.1,0.2,0.2,0.3l7,7c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3c0.4-0.4,0.4-1,0-1.4L7.4,13H19c0.6,0,1-0.4,1-1S19.6,11,19,11z"></path></svg><span class="text" data-v-38ede35f>起步</span></a></div><div class="next" data-v-38ede35f><a class="link" href="/my-docs/main/route" data-v-38ede35f><span class="text" data-v-38ede35f>路由</span><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" class="icon icon-next" data-v-38ede35f><path d="M19.9,12.4c0.1-0.2,0.1-0.5,0-0.8c-0.1-0.1-0.1-0.2-0.2-0.3l-7-7c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l5.3,5.3H5c-0.6,0-1,0.4-1,1s0.4,1,1,1h11.6l-5.3,5.3c-0.4,0.4-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l7-7C19.8,12.6,19.9,12.5,19.9,12.4z"></path></svg></a></div></div></div><!--[--><!--]--></div></main></div><!----><!--]--></div>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"index.md\":\"ade16d06\",\"about_index.md\":\"a3eedd8d\",\"main_config.md\":\"bc48b11e\",\"main_index.md\":\"772b4fc0\",\"main_main.md\":\"57d1a2f8\",\"main_md.md\":\"289b5aa5\",\"main_route.md\":\"0a6cbc9d\",\"main_start.md\":\"bc0bd089\",\"post_index.md\":\"48960cc2\",\"post_child_child.md\":\"7751988e\"}")</script>
+    <script type="module" async src="/my-docs/assets/app.e800a447.js"></script>
+  </body>
+</html>

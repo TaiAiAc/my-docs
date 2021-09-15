@@ -1,0 +1,1 @@
+import{o as n,c as s,d as a}from"./app.e800a447.js";const t='{"title":"路由","description":"","frontmatter":{},"relativePath":"main/route.md","lastUpdated":1631693508249}',p={},o=[a('',5)];p.render=function(a,t,p,e,c,l){return n(),s("div",null,o)};export{t as __pageData,p as default};
